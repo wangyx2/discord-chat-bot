@@ -1,0 +1,17 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = True)
+
+async def on_ready():
+    print('Bot is here ')
+
+
+async def on_member_join(member):
+    print(f'{member} has joined a server.')
+
+
+async def add(ctx,a:float):#add members into the sever
+    await ctx.send(a)
+
+
